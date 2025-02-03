@@ -9,6 +9,12 @@ A weather dashboard application that displays current weather information and fo
 - **Responsive Design**: The dashboard is mobile-friendly and adjusts to different screen sizes.
 - **Dynamic City Selection**: Users can search for and select a city to view the weather data.
 
+## Technologies Used
+•	Weather API – Fetches real-time weather data.
+•	shadcn/ui – Provides pre-styled UI components.
+•	Tailwind CSS – Utility-first CSS framework for styling.
+•	React + Vite – Fast and modern development environment.
+
 ## Installation
 
 Follow these steps to set up and run the project locally.
@@ -36,3 +42,9 @@ To run this project locally, you need to define certain environment variables in
 3. run ```npm install``` to download dependencies
 
 4. run ```vite``` to start the program
+
+### Project Images
+- Dark mode 
+![img.png](img.png)
+- light mode 
+![img_1.png](img_1.png)
