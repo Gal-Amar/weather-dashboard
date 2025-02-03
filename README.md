@@ -28,7 +28,7 @@ To run this project locally, you need to define certain environment variables in
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/weather-dashboard.git
+   git clone https://github.com/Gal-Amar/weather-dashboard.git
    cd weather-dashboard
    
 2. Create a .env file and add your API key inside it.
