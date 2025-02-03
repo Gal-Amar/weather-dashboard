@@ -2,16 +2,20 @@ import { AppSidebar } from "../../components/app-sidebar";
 
 import { CitySelect } from "../../components/city-select.tsx";
 import WeatherCards from "../../components/weather-cards.tsx";
-import {  WeatherProvider } from "../../context/weather-context.tsx";
+import {useWeather} from "../../context/weather-context.tsx";
 import {SidebarInset, SidebarProvider, SidebarTrigger} from "../../components/ui/sidebar.tsx";
 import {ThemeToggle} from "../../components/theme-toggle.tsx";
 import HumidityChart from "@/components/humidity-chart.tsx";
 import CurrentWeather from "@/components/current-weather.tsx";
+import {useEffect} from "react";
 
 export default function Page() {
+  const {weatherData} = useWeather()
+  useEffect(() => {
 
+  }, [weatherData]);
   return (
-      <WeatherProvider>
+
         <SidebarProvider>
           <AppSidebar />
           <SidebarInset>
@@ -26,19 +30,22 @@ export default function Page() {
                 <div className="rounded-xl bg-muted/50 p-4">
                   <CitySelect />
                 </div>
-                <div className="rounded-xl bg-muted/50 p-4">
-                  < CurrentWeather />
-                </div>
-                <div className="rounded-xl bg-muted/50 p-4">
-                  <WeatherCards  />
-                </div>
-                <div className="rounded-xl bg-muted/50 p-4">
-                  <HumidityChart />
-                </div>
+                {weatherData &&
+                    <div className={"flex flex-col gap-2 p-4 rounded-xl"}>
+                      <div className="rounded-xl bg-muted/50 p-4">
+                        < CurrentWeather />
+                      </div>
+                      <div className="rounded-xl bg-muted/50 p-4">
+                        <WeatherCards  />
+                      </div>
+                      <div className="rounded-xl bg-muted/50 p-4">
+                        <HumidityChart />
+                      </div>
+                    </div>
+                }
               </div>
             </div>
           </SidebarInset>
         </SidebarProvider>
-      </WeatherProvider>
   );
 }

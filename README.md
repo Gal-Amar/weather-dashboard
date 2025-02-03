@@ -45,6 +45,6 @@ To run this project locally, you need to define certain environment variables in
 
 ### Project Images
 - Dark mode 
-![img.png](img.png)
+![img.png](src/assets/dashboard-light.png)
 - light mode 
-![img_1.png](img_1.png)
+![img_1.png](src/assets/dashboard-dark.png)

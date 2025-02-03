@@ -3,9 +3,9 @@ import { Card, CardContent } from "./ui/card";
 import { useWeather } from "../context/weather-context.tsx";
 
 const WeatherCards: React.FC = () => {
-    const { weatherData } = useWeather(); // Destructure correctly
+    const { weatherData } = useWeather();
     if (!weatherData) {
-        return <p className={"flex justify-center"}>The weather will appear here once you select a city.</p>; // Provide a fallback
+        return <p className={"flex justify-center"}>The weather will appear here once you select a city.</p>;
     }
 
     return (

@@ -11,7 +11,6 @@ import {
   SidebarMenuItem,
 } from "./ui/sidebar"
 
-// Menu items.
 const items = [
   {
     title: "Home",
@@ -25,7 +24,7 @@ export function AppSidebar() {
       <Sidebar >
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupLabel>Weather Dashboard</SidebarGroupLabel>
+            <SidebarGroupLabel>Welcome to Weather Dashboard</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu className="pt-1">
                 {items.map((item) => (
